@@ -145,7 +145,7 @@ onMounted(async () => {
           </div>
           
           <div v-else>
-            <div v-if="error" class="mb-4 p-2 bg-red-100 text-red-600 rounded" role="alert">
+            <div v-show="error" class="mb-4 p-2 bg-red-100 text-red-600 rounded" role="alert" data-testid="error-message">
               {{ error }}
             </div>
 
