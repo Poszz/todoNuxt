@@ -7,7 +7,13 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "test:ui": "vitest --ui",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug"
   },
   "dependencies": {
     "@sidebase/nuxt-auth": "^0.9.4",
@@ -29,15 +35,24 @@
     "v-calendar": "^3.1.2",
     "vaul-vue": "^0.2.0",
     "vee-validate": "^4.14.3",
-    "vue": "latest",
+    "vue": "^3.5.12",
     "vue-router": "latest",
     "vue-sonner": "^1.2.3",
     "vuex": "^4.1.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@nuxt/test-utils": "^3.14.4",
     "@nuxtjs/tailwindcss": "^6.12.2",
+    "@playwright/test": "^1.48.1",
+    "@types/jest": "^29.5.14",
     "@types/vue": "^1.0.31",
-    "typescript": "^5.6.3"
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^15.7.4",
+    "jsdom": "^25.0.1",
+    "playwright-core": "^1.48.1",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.3"
   }
 }
