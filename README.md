@@ -73,3 +73,7 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+Testing mainly using playwright
+
+Go to front branch and use command npm run test:e2e
