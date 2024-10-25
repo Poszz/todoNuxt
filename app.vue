@@ -11,7 +11,7 @@ interface Todo {
   updated: string;
 }
 
-const pb = ref<PocketBase | null>(null);
+const pb = ref<PocketBase | null>(null); 
 const currentUser = ref();
 const tasks = ref<Todo[]>([]);
 const newTask = ref('');
@@ -116,8 +116,8 @@ const removeTask = async (id: string, index: number) => {
   error.value = '';
 
   try {
-    await pb.value.collection('Todos').delete(id);
-    tasks.value = tasks.value.filter(task => task.id !== id);
+    await pb.value!.collection('Todos').delete(id);
+    tasks.value = tasks.value.filter((task: Todo) => task.id !== id);
   } catch (err: any) {
     error.value = err?.message || 'Failed to remove todo';
   }
